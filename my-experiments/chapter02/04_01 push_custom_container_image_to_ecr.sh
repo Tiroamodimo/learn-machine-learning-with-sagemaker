@@ -3,7 +3,7 @@
 
 
 # Navigate to the ml-python directory containing our Dockerfile
-PYTHON_ML_DIR="/home/letlhogile/Documents/educational_projects/202208_02 ML Sagemaker Cookbook/environment/opt/ml-python"
+PYTHON_ML_DIR="/home/letlhogile/Documents/educational_projects/202208_02_ML_Sagemaker_Cookbook/environment/opt/ml-python"
 cd "$PYTHON_ML_DIR"
 
 # get account_id
@@ -26,10 +26,10 @@ REMOTE_REPO_URI=$AWS_ECR_SERVER/$IMAGE_NAME
 TAG=1
 
 # tag a local image, IMAGE_NAME, with version TAG into the repository with uri, TARGE_IMAGE_URI, with version TA:
-sudo docker tag $IMAGE_NAME:$TAG $REMOTE_REPO_URI:$TAG
-
-# push image to amazon ECR
-sudo docker push $REMOTE_REPO_URI:$TAG
+#sudo docker tag $IMAGE_NAME:$TAG $REMOTE_REPO_URI:$TAG
+#
+## push image to amazon ECR
+#sudo docker push $REMOTE_REPO_URI:$TAG
 
 # run command below in terminal to run this script from project root folder
 # ./"learn-machine-learning-with-sagemaker/my-experiments/chapter02/04_01 push_custom_container_image_to_ecr.sh"
